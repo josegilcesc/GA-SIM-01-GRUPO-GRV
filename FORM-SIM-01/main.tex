@@ -1,0 +1,117 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[a4paper,top=2.5cm,bottom=2.3cm,left=2.2cm,right=2.2cm,headheight=28pt]{geometry}
+\usepackage{microtype}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage[most]{tcolorbox}
+\usepackage{csquotes}
+\usepackage[backend=biber,style=ieee]{biblatex}
+\usepackage[hidelinks]{hyperref}
+
+\addbibresource{referencias.bib}
+
+% Paleta institucional UTEQ
+\definecolor{uteqgreen}{HTML}{0B7A3B}
+\definecolor{uteqdark}{HTML}{075C2C}
+\definecolor{rowgray}{HTML}{F2F4F3}
+\definecolor{boxbg}{HTML}{F7F9F8}
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcommand{\thdr}[1]{\cellcolor{uteqgreen}\textcolor{white}{\textbf{#1}}}
+
+% Encabezado y pie de pagina
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\footnotesize UTEQ $\cdot$ Ingenier\'ia de Requerimientos (ISR-401) $\cdot$ SPA 2026--2027}
+\rhead{\footnotesize FORM-SIM-01 (GA-SIM-01)}
+\lfoot{\footnotesize Dominio 6: Asociaci\'on de productores de cacao}
+\rfoot{\footnotesize P\'agina \thepage\ de \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlength{\emergencystretch}{3em}
+\renewcommand{\arraystretch}{1.2}
+
+\begin{document}
+
+% ==============================================================================
+% PORTADA Y DATOS INFORMATIVOS
+% ==============================================================================
+\begin{titlepage}
+    \centering
+    \vspace*{0.5cm}
+    {\Large\textbf{\textcolor{uteqdark}{UNIVERSIDAD T\'ECNICA ESTATAL DE QUEVEDO}}}\\[0.2cm]
+    {\large Facultad de Ciencias de la Computaci\'on}\\[0.15cm]
+    {\large Carrera de Ingenier\'ia de Software}\\[0.7cm]
+
+    \textcolor{uteqgreen}{\rule{\linewidth}{1.5pt}}\\[0.45cm]
+    {\LARGE\textbf{ACTIVIDAD FORMATIVA: FORM-SIM-01}}\\[0.2cm]
+    {\large\textit{(Identificador SGA: GA-SIM-01 -- FORM $\cdot$ Preparaci\'on para TA-IND-02)}}\\[0.3cm]
+    {\Large Priorizaci\'on de Requisitos con MoSCoW, Kano y Votaci\'on Ponderada}\\[0.45cm]
+    \textcolor{uteqgreen}{\rule{\linewidth}{1.5pt}}\\[0.8cm]
+
+    \begin{tcolorbox}[colback=boxbg,colframe=uteqgreen,boxrule=0.8pt,arc=2mm,title={\textbf{Dominio Asignado por Sorteo (N.\textsuperscript{o} 6)}}]
+        \centering
+        \textbf{Asociaci\'on de productores de cacao: acopio y pagos}
+    \end{tcolorbox}
+
+    \vspace{0.6cm}
+
+    \noindent\begin{tabularx}{\linewidth}{|p{0.29\linewidth}|Y|}
+        \hline
+        \thdr{Campo} & \thdr{Detalle}\\
+        \hline
+        Asignatura & Ingenier\'ia de Requerimientos (ISR-401) --- 4.\textsuperscript{o} Nivel, Paralelo B\\
+        \hline
+        \rowcolor{rowgray} Docente & Gleiston Cicer\'on Guerrero Ulloa, PhD (\texttt{gguerrero@uteq.edu.ec})\\
+        \hline
+        Unidad & Unidad 2. Elicitaci\'on y An\'alisis de Requisitos\\
+        \hline
+        \rowcolor{rowgray} Per\'iodo Acad\'emico & Segundo Per\'iodo Acad\'emico Ordinario (SPA) 2026--2027\\
+        \hline
+        Integrantes del equipo &
+        \textbf{Robinson Espinoza Jeanpierre} (C.I. 1722574223 --- \texttt{jrobinsone@uteq.edu.ec})\\
+        & \textbf{V\'elez Vinces Jostin Gustavo} (C.I. 1316917838 --- \texttt{jvelezv10@uteq.edu.ec})\\
+        & \textbf{Gilces Carranza Jos\'e Ignacio} (C.I. 1251059240 --- \texttt{jgilcesc3@uteq.edu.ec})\\
+        \hline
+    \end{tabularx}
+
+    \vfill
+    {\normalsize Quevedo, Los R\'ios, Ecuador}\\
+    {\normalsize Noviembre de 2026}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+% ==============================================================================
+% SECCIONES MODULARES (DIA 1)
+% ==============================================================================
+% \input{secciones/01_introduccion} % Pendiente (Integrante 3: Gilces Carranza)
+% \input{secciones/02_fundamentacion} % Pendiente (Integrante 1: Robinson Espinoza)
+% \input{secciones/03_requisitos_funcionales} % Pendiente (Integrante 3: Gilces Carranza)
+% \input{secciones/04_requisitos_calidad} % Pendiente (Integrante 2: Velez Vinces)
+% \input{secciones/05_moscow} % Pendiente (Integrante 3: Gilces Carranza)
+% \input{secciones/06_instrumento_kano} % Pendiente (Integrante 2: Velez Vinces)
+% \input{secciones/07_instrumento_votacion_etica} % Pendiente (Integrante 1: Robinson Espinoza)
+
+% --- SECCIONES PENDIENTES PARA DIAS 2 Y 3 ---
+% \input{secciones/08_resultados_spearman}
+% \input{secciones/09_decision_manifiesto_ia}
+
+\newpage
+\printbibliography[heading=bibintoc,title={Referencias}]
+
+\end{document}
