@@ -1,0 +1,34 @@
+\section{Instrumento de votaci\'on ponderada y protocolo \'etico}
+\label{sec:votacion-etica}
+
+\subsection{Protocolo de consentimiento informado y custodia LOPDP}
+
+El levantamiento de preferencias se rige por el C\'odigo de \'Etica de la ACM \cite{acm2018} y la Ley Org\'anica de Protecci\'on de Datos Personales del Ecuador (LOPDP) \cite{lopdp2021}. Ning\'un dato personal de terceros (nombres completos, n\'umeros de c\'edula, tel\'efonos ni consentimientos firmados) se publica en el repositorio p\'ublico de GitHub. Las evidencias originales permanecen en una carpeta institucional privada (\texttt{@uteq.edu.ec}) compartida con el docente, y en el repositorio se registra \'unicamente el manifiesto anonimizado con c\'odigos de rol (\texttt{P1}--\texttt{P5}, \texttt{V1}--\texttt{V3}) y huellas criptogr\'aficas SHA-256.
+
+\begin{tcolorbox}[colback=boxbg,colframe=uteqgreen,boxrule=0.8pt,arc=2mm,title={\textbf{Extracto del formato de consentimiento informado --- FORM-SIM-01}}]
+\textbf{Actividad:} FORM-SIM-01 (GA-SIM-01) --- Priorizaci\'on de requisitos (Dominio 6: Asociaci\'on de productores de cacao).\\
+\textbf{Finalidad:} Recolectar preferencias sobre 20 requisitos de software con fines estrictamente acad\'emicos en la asignatura Ingenier\'ia de Requerimientos (ISR-401, UTEQ).\\
+\textbf{Garant\'ias LOPDP:} Participaci\'on voluntaria y revocable; anonimizaci\'on estricta mediante c\'odigo de rol en los archivos p\'ublicos; custodia privada institucional de los formularios firmados y eliminaci\'on al finalizar el periodo SPA 2026--2027.
+\end{tcolorbox}
+
+\subsection{Dise\~no de la votaci\'on ponderada (100 puntos)}
+
+En la t\'ecnica de votaci\'on ponderada (presupuesto fijo de 100 puntos), tres participantes con roles distintos del dominio (\texttt{V1}: Productor socio cacaotero; \texttt{V2}: Encargado de acopio y pesaje; \texttt{V3}: Tesorero / administrador) distribuyen exactamente 100 puntos entre los 20 requisitos del cat\'alogo (Tabla~\ref{tab:votacion-diseno}). Un requisito puede recibir cero puntos si el participante lo considera prescindible en la primera versi\'on.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Roles participantes y reglas de asignaci\'on para la votaci\'on ponderada.}
+\label{tab:votacion-diseno}
+\begin{tabularx}{\linewidth}{|p{0.11\linewidth}|p{0.28\linewidth}|p{0.17\linewidth}|Y|}
+\hline
+\thdr{C\'odigo} & \thdr{Rol en el dominio} & \thdr{Presupuesto} & \thdr{Enfoque prioritario esperado}\\
+\hline
+\textbf{V1} & Productor socio cacaotero & 100 puntos & Transparencia en el pesaje, humedad, comprobante inmediato y rapidez en el pago.\\
+\hline
+\rowcolor{rowgray} \textbf{V2} & Encargado de acopio / pesaje & 100 puntos & Agilidad de recepci\'on, control de calidad, operaci\'on sin internet y lotes de bodega.\\
+\hline
+\textbf{V3} & Tesorero / administrador & 100 puntos & Exactitud de liquidaciones, cruce de anticipos, tarifario vigente y control de desembolsos.\\
+\hline
+\end{tabularx}
+\end{table}

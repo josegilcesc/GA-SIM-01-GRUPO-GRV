@@ -1,0 +1,33 @@
+\subsection{Requisitos de calidad cuantificados (RNF-01 a RNF-08)}
+\label{subsec:rnf}
+
+Los 8 requisitos de calidad se clasifican seg\'un el modelo de calidad de producto de ISO/IEC 25010:2023 \cite{iso25010}, incorporando m\'etricas verificables, umbrales objetivos y m\'etodos de comprobaci\'on (Tabla~\ref{tab:rnf}).
+
+\begin{table}[htbp]
+\centering
+\scriptsize
+\renewcommand{\arraystretch}{1.15}
+\caption{Requisitos de calidad cuantificados bajo ISO/IEC/IEEE 29148:2018 e ISO/IEC 25010:2023.}
+\label{tab:rnf}
+\begin{tabularx}{\linewidth}{|p{0.08\linewidth}|Y|p{0.17\linewidth}|p{0.15\linewidth}|p{0.14\linewidth}|}
+\hline
+\thdr{ID} & \thdr{Enunciado cuantificado} & \thdr{ISO/IEC 25010} & \thdr{M\'etrica y umbral} & \thdr{Verificaci\'on}\\
+\hline
+\textbf{RNF-01} & Al ejecutar conversiones de peso neto seco y liquidaciones de pago, el sistema deber\'a calcular los montos con precisi\'on exacta de dos decimales y cero discrepancias de redondeo frente a la auditor\'ia contable sobre 500 transacciones de prueba. & Adecuaci\'on funcional (Exactitud) & 0 errores en 500 c\'alculos; 0,01 USD & Prueba unitaria e inspecci\'on contable\\
+\hline
+\rowcolor{rowgray} \textbf{RNF-02} & Cuando un usuario intente acceder a tarifas, liquidaciones o datos personales de socios, el sistema deber\'a exigir autenticaci\'on por roles (Acopiador, Tesorero, Administrador), cifrar datos sensibles en reposo (AES-256) y rechazar el 100\,\% de 200 intentos no autorizados conforme a la LOPDP \cite{lopdp2021}. & Seguridad (Control de acceso) & 100\,\% denegaci\'on indebida; AES-256 & Pruebas de roles e inspecci\'on\\
+\hline
+\textbf{RNF-03} & Durante jornadas pico de cosecha con hasta 25 usuarios concurrentes y 50\,000 registros hist\'oricos, el sistema deber\'a procesar y confirmar el guardado de un comprobante de recepci\'on en un tiempo $\le$ 2,0 segundos en el percentil 95. & Eficiencia de desempe\~no (Tiempo) & p95 $\le$ 2,0 s con 25 usuarios & Prueba de carga (JMeter)\\
+\hline
+\rowcolor{rowgray} \textbf{RNF-04} & Ante la p\'erdida de conectividad a internet en el centro de acopio rural, el sistema deber\'a permitir continuar registrando comprobantes de pesaje en almacenamiento local durante un m\'inimo de 8 horas continuas y sincronizar el 100\,\% sin p\'erdida al restablecerse la red. & Fiabilidad (Tolerancia a fallos) & Offline $\ge$ 8 h; 0\,\% p\'erdida de datos & Prueba de desconexi\'on controlada\\
+\hline
+\textbf{RNF-05} & En pruebas con personal operativo del centro de acopio sin formaci\'on t\'ecnica previa, al menos el 85\,\% de los evaluados deber\'a completar el registro de una entrega y emitir el comprobante en un m\'aximo de 90 segundos sin asistencia externa. & Capacidad de interacci\'on (Operabilidad) & $\ge$ 85\,\% \'exito; tiempo $\le$ 90 s & Prueba de usabilidad cronometrada\\
+\hline
+\rowcolor{rowgray} \textbf{RNF-06} & El sistema deber\'a mantener una disponibilidad operativa m\'inima del 99,0\,\% durante el horario laboral de acopio (lunes a s\'abado, de 07:00 a 18:00), medida mensualmente mediante monitoreo continuo. & Fiabilidad (Disponibilidad) & Uptime $\ge$ 99,0\,\% mensual & An\'alisis de registros de monitoreo\\
+\hline
+\textbf{RNF-07} & Cuando el contador solicite el cierre mensual de compras, el sistema deber\'a exportar el 100\,\% de las liquidaciones del periodo en archivos CSV y XML compatibles con el esquema tributario vigente del SRI en menos de 15 segundos para lotes de hasta 5\,000 registros. & Compatibilidad (Interoperabilidad) & 100\,\% validez XSD; tiempo $\le$ 15 s & Validaci\'on XSD y prueba funcional\\
+\hline
+\rowcolor{rowgray} \textbf{RNF-08} & El m\'odulo m\'ovil de consulta de estados de cuenta para socios deber\'a ejecutarse en dispositivos con Android 10 o superior y consumir menos de 80 MB de memoria RAM en operaci\'on est\'andar. & Flexibilidad (Adaptabilidad) & Android $\ge$ 10; RAM $\le$ 80 MB & Prueba en dispositivos y perfilado\\
+\hline
+\end{tabularx}
+\end{table}

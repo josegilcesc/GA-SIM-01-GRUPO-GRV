@@ -1,0 +1,41 @@
+participante_id,rol,caracteristica_id,requisito_id,descripcion,respuesta_funcional,respuesta_disfuncional,categoria_kano
+P1,Productor socio cacaotero,K1,RF-04,Comprobante inmediato de acopio,2,5,M
+P2,Productor socio cacaotero,K1,RF-04,Comprobante inmediato de acopio,2,5,M
+P3,Encargado de acopio / pesaje,K1,RF-04,Comprobante inmediato de acopio,2,5,M
+P4,Tesorero / liquidador,K1,RF-04,Comprobante inmediato de acopio,1,5,O
+P5,Administrador de centro de acopio,K1,RF-04,Comprobante inmediato de acopio,2,5,M
+P1,Productor socio cacaotero,K2,RF-05,Calculo automatico de peso neto seco y castigos,1,5,O
+P2,Productor socio cacaotero,K2,RF-05,Calculo automatico de peso neto seco y castigos,1,5,O
+P3,Encargado de acopio / pesaje,K2,RF-05,Calculo automatico de peso neto seco y castigos,2,5,M
+P4,Tesorero / liquidador,K2,RF-05,Calculo automatico de peso neto seco y castigos,1,5,O
+P5,Administrador de centro de acopio,K2,RF-05,Calculo automatico de peso neto seco y castigos,1,5,O
+P1,Productor socio cacaotero,K3,RF-07,Liquidacion automatica con cruce de anticipos,1,5,O
+P2,Productor socio cacaotero,K3,RF-07,Liquidacion automatica con cruce de anticipos,2,5,M
+P3,Encargado de acopio / pesaje,K3,RF-07,Liquidacion automatica con cruce de anticipos,1,5,O
+P4,Tesorero / liquidador,K3,RF-07,Liquidacion automatica con cruce de anticipos,1,5,O
+P5,Administrador de centro de acopio,K3,RF-07,Liquidacion automatica con cruce de anticipos,2,5,M
+P1,Productor socio cacaotero,K4,RF-09,Control de creditos y anticipos de insumos,1,5,O
+P2,Productor socio cacaotero,K4,RF-09,Control de creditos y anticipos de insumos,1,3,A
+P3,Encargado de acopio / pesaje,K4,RF-09,Control de creditos y anticipos de insumos,1,5,O
+P4,Tesorero / liquidador,K4,RF-09,Control de creditos y anticipos de insumos,2,5,M
+P5,Administrador de centro de acopio,K4,RF-09,Control de creditos y anticipos de insumos,1,5,O
+P1,Productor socio cacaotero,K5,RF-11,Notificacion automatica por SMS/WhatsApp,1,3,A
+P2,Productor socio cacaotero,K5,RF-11,Notificacion automatica por SMS/WhatsApp,1,4,A
+P3,Encargado de acopio / pesaje,K5,RF-11,Notificacion automatica por SMS/WhatsApp,1,3,A
+P4,Tesorero / liquidador,K5,RF-11,Notificacion automatica por SMS/WhatsApp,3,3,I
+P5,Administrador de centro de acopio,K5,RF-11,Notificacion automatica por SMS/WhatsApp,1,2,A
+P1,Productor socio cacaotero,K6,RF-12,Mapa georreferenciado de parcelas por lote,3,3,I
+P2,Productor socio cacaotero,K6,RF-12,Mapa georreferenciado de parcelas por lote,3,4,I
+P3,Encargado de acopio / pesaje,K6,RF-12,Mapa georreferenciado de parcelas por lote,3,3,I
+P4,Tesorero / liquidador,K6,RF-12,Mapa georreferenciado de parcelas por lote,2,3,I
+P5,Administrador de centro de acopio,K6,RF-12,Mapa georreferenciado de parcelas por lote,1,3,A
+P1,Productor socio cacaotero,K7,RNF-04,Registro offline ante fallas de internet,2,5,M
+P2,Productor socio cacaotero,K7,RNF-04,Registro offline ante fallas de internet,3,5,M
+P3,Encargado de acopio / pesaje,K7,RNF-04,Registro offline ante fallas de internet,2,5,M
+P4,Tesorero / liquidador,K7,RNF-04,Registro offline ante fallas de internet,1,5,O
+P5,Administrador de centro de acopio,K7,RNF-04,Registro offline ante fallas de internet,1,5,O
+P1,Productor socio cacaotero,K8,RNF-07,Exportacion de cierres contables para el SRI,3,3,I
+P2,Productor socio cacaotero,K8,RNF-07,Exportacion de cierres contables para el SRI,3,4,I
+P3,Encargado de acopio / pesaje,K8,RNF-07,Exportacion de cierres contables para el SRI,3,3,I
+P4,Tesorero / liquidador,K8,RNF-07,Exportacion de cierres contables para el SRI,1,3,A
+P5,Administrador de centro de acopio,K8,RNF-07,Exportacion de cierres contables para el SRI,1,2,A
