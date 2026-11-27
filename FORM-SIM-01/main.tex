@@ -2,9 +2,11 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \usepackage[spanish,es-tabla]{babel}
 \usepackage[a4paper,top=2.5cm,bottom=2.3cm,left=2.2cm,right=2.2cm,headheight=28pt]{geometry}
 \usepackage{microtype}
+\usepackage{amsmath}
 \usepackage{array}
 \usepackage{tabularx}
 \usepackage{booktabs}
@@ -42,7 +44,7 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{5pt}
 \setlength{\emergencystretch}{3em}
-\renewcommand{\arraystretch}{1.2}
+\renewcommand{\arraystretch}{1.18}
 
 \begin{document}
 
@@ -81,10 +83,12 @@
         \hline
         \rowcolor{rowgray} Per\'iodo Acad\'emico & Segundo Per\'iodo Acad\'emico Ordinario (SPA) 2026--2027\\
         \hline
-        Integrantes del equipo &
+        Fecha l\'imite de cierre & Viernes 27 de noviembre de 2026, a las 23:59\\
+        \hline
+        \rowcolor{rowgray} Integrantes del equipo &
         \textbf{Robinson Espinoza Jeanpierre} (C.I. 1722574223 --- \texttt{jrobinsone@uteq.edu.ec})\\
-        & \textbf{V\'elez Vinces Jostin Gustavo} (C.I. 1316917838 --- \texttt{jvelezv10@uteq.edu.ec})\\
-        & \textbf{Gilces Carranza Jos\'e Ignacio} (C.I. 1251059240 --- \texttt{jgilcesc3@uteq.edu.ec})\\
+        \rowcolor{rowgray} & \textbf{V\'elez Vinces Jostin Gustavo} (C.I. 1316917838 --- \texttt{jvelezv10@uteq.edu.ec})\\
+        \rowcolor{rowgray} & \textbf{Gilces Carranza Jos\'e Ignacio} (C.I. 1251059240 --- \texttt{jgilcesc3@uteq.edu.ec})\\
         \hline
     \end{tabularx}
 
@@ -97,19 +101,17 @@
 \newpage
 
 % ==============================================================================
-% SECCIONES MODULARES (DIA 1)
+% SECCIONES MODULARES
 % ==============================================================================
 \input{secciones/01_introduccion}
-% \input{secciones/02_fundamentacion} % Pendiente (Integrante 1: Robinson Espinoza)
-% \input{secciones/03_requisitos_funcionales} % Pendiente (Integrante 3: Gilces Carranza)
-% \input{secciones/04_requisitos_calidad} % Pendiente (Integrante 2: Velez Vinces)
-% \input{secciones/05_moscow} % Pendiente (Integrante 3: Gilces Carranza)
-% \input{secciones/06_instrumento_kano} % Pendiente (Integrante 2: Velez Vinces)
-% \input{secciones/07_instrumento_votacion_etica} % Pendiente (Integrante 1: Robinson Espinoza)
-
-% --- SECCIONES PENDIENTES PARA DIAS 2 Y 3 ---
-% \input{secciones/08_resultados_spearman}
-% \input{secciones/09_decision_manifiesto_ia}
+\input{secciones/02_fundamentacion}
+% \input{secciones/03_requisitos_funcionales} % Pendiente (Dia 2 - Commit 05)
+% \input{secciones/04_requisitos_calidad} % Pendiente (Dia 2 - Commit 06)
+% \input{secciones/05_moscow} % Pendiente (Dia 2 - Commit 05)
+% \input{secciones/06_instrumento_kano} % Pendiente (Dia 2 - Commit 06)
+% \input{secciones/07_instrumento_votacion_etica} % Pendiente (Dia 2 - Commit 06)
+% \input{secciones/08_resultados_spearman} % Pendiente (Dia 3 - Commit 07)
+% \input{secciones/09_manifiesto_y_ia} % Pendiente (Dia 3 - Commit 08)
 
 \newpage
 \printbibliography[heading=bibintoc,title={Referencias}]

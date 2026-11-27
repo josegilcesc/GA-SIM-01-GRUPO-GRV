@@ -1,0 +1,26 @@
+\section{Fundamentaci\'on conceptual}
+\label{sec:fundamentacion}
+
+La priorizaci\'on de requisitos constituye una actividad central del an\'alisis y la negociaci\'on orientada a asignar un orden o categor\'ia a cada requisito seg\'un criterios expl\'icitos como valor de negocio, costo de implementaci\'on, riesgo t\'ecnico, urgencia normativa o impacto en la satisfacci\'on del usuario \cite{pohl2025,wiegers2013}. Dado que los proyectos de software operan con restricciones finitas de tiempo, presupuesto y esfuerzo, priorizar permite delimitar el alcance de la primera versi\'on con respaldo objetivo de las partes interesadas en lugar de opiniones aisladas del analista \cite{ireb2026}.
+
+Cada t\'ecnica empleada eval\'ua una dimensi\'on distinta del problema, tal como se sintetiza en la Tabla~\ref{tab:comparativa-tecnicas}.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Comparaci\'on conceptual de las tres t\'ecnicas de priorizaci\'on aplicadas.}
+\label{tab:comparativa-tecnicas}
+\begin{tabularx}{\linewidth}{|p{0.16\linewidth}|p{0.22\linewidth}|Y|p{0.26\linewidth}|}
+\hline
+\thdr{T\'ecnica} & \thdr{Criterio principal} & \thdr{Mecanismo de aplicaci\'on} & \thdr{Fortaleza y limitaci\'on}\\
+\hline
+\textbf{MoSCoW} & Obligatoriedad operativa, alcance m\'inimo viable y tope de esfuerzo. & Clasifica cada requisito en \textit{Must have}, \textit{Should have}, \textit{Could have} y \textit{Won't have}. El grupo \textit{Must} no debe superar el 60\,\% del esfuerzo estimado \cite{wiegers2013,ireb2026}. & F\'acil de comunicar y alinear con el cronograma; no establece un orden fino dentro de cada categor\'ia.\\
+\hline
+\rowcolor{rowgray} \textbf{Modelo de Kano} & Impacto no lineal en la satisfacci\'on o insatisfacci\'on del usuario. & Aplica preguntas funcionales (presencia) y disfuncionales (ausencia) y cruza respuestas en la matriz 5$\times$5 para clasificar en Obligatoria (M), Desempe\~no (O), Atractiva (A), Indiferente (I), Inversa (R) o Cuestionable (Q) \cite{pohl2025,wiegers2013}. & Detecta expectativas impl\'icitas cuya ausencia causa rechazo inmediato; requiere encuestas y no pondera costos.\\
+\hline
+\textbf{Votaci\'on ponderada (100 pts)} & Valor relativo percibido bajo presupuesto fijo. & Cada participante distribuye exactamente 100 puntos entre los 20 requisitos. La suma de puntajes genera una jerarqu\'ia cuantitativa continua \cite{wiegers2013,ireb2026}. & Obliga a realizar concesiones reales entre requisitos; puede sesgarse si se omiten dependencias t\'ecnicas.\\
+\hline
+\end{tabularx}
+\end{table}
+
+Al triangular los tres m\'etodos se compensan los sesgos individuales: MoSCoW controla la viabilidad t\'ecnica y el l\'imite de esfuerzo, Kano identifica atributos cuya ausencia paraliza la aceptaci\'on del sistema y la votaci\'on ponderada mide la intensidad de preferencia de los actores del dominio.
