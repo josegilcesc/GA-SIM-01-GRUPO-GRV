@@ -1,0 +1,46 @@
+\section{Cat\'alogo de requisitos del dominio}
+\label{sec:requisitos}
+
+Los 20 requisitos del sistema se formulan siguiendo la estructura can\'onica de ISO/IEC/IEEE 29148:2018 (cl\'ausulas 5.2.4 y 5.2.5) para asegurar singularidad, claridad, no ambig\"uedad y verificabilidad \cite{iso29148}.
+
+\subsection{Requisitos funcionales (RF-01 a RF-12)}
+\label{subsec:rf}
+
+La Tabla~\ref{tab:rf} detalla los 12 requisitos funcionales que cubren el padr\'on de socios, recepci\'on, control de calidad, c\'alculo de peso seco, tarifario, liquidaci\'on, pagos, anticipos, lotes, notificaciones y trazabilidad.
+
+\begin{table}[htbp]
+\centering
+\scriptsize
+\renewcommand{\arraystretch}{1.15}
+\caption{Cat\'alogo de requisitos funcionales redactados bajo ISO/IEC/IEEE 29148:2018.}
+\label{tab:rf}
+\begin{tabularx}{\linewidth}{|p{0.08\linewidth}|Y|p{0.21\linewidth}|}
+\hline
+\thdr{ID} & \thdr{Enunciado del requisito (sintaxis can\'onica ISO/IEC/IEEE 29148)} & \thdr{Actor / M\'odulo}\\
+\hline
+\textbf{RF-01} & Cuando un productor solicite afiliaci\'on o actualizaci\'on de datos, el sistema deber\'a registrar y mantener su ficha con c\'odigo \'unico de socio, identificaci\'on, parroquia, hect\'areas cultivadas de cacao y variedad predominante (CCN-51 o Nacional Arriba). & Administrador / Padr\'on de Socios\\
+\hline
+\rowcolor{rowgray} \textbf{RF-02} & Cuando un socio entregue cacao en el centro de acopio, el sistema deber\'a registrar el peso bruto en kilogramos, el n\'umero y tara de los sacos, el estado del grano (baba o seco) y la fecha y hora de recepci\'on. & Acopiador / Recepci\'on\\
+\hline
+\textbf{RF-03} & Durante la recepci\'on de cada entrega, el sistema deber\'a registrar los par\'ametros de control de calidad medidos en sitio: porcentaje de humedad, porcentaje de impurezas y porcentaje de granos fermentados. & Inspector de Calidad / Recepci\'on\\
+\hline
+\rowcolor{rowgray} \textbf{RF-04} & Al confirmar el registro de pesaje y calidad, el sistema deber\'a emitir un comprobante numerado de acopio en formato imprimible y digital con el detalle del socio, variedad, peso bruto, tara y humedad registrada. & Acopiador / Recepci\'on\\
+\hline
+\textbf{RF-05} & Cuando se complete el registro de pesaje y humedad, el sistema deber\'a calcular autom\'aticamente el peso neto seco equivalente en quintales aplicando la tabla oficial de conversi\'on y castigos por humedad e impurezas configurada por la asociaci\'on. & Sistema / C\'alculo de Acopio\\
+\hline
+\rowcolor{rowgray} \textbf{RF-06} & Antes del inicio de la jornada de acopio, el sistema deber\'a permitir al administrador actualizar y mantener el historial de precios vigentes por quintal de cacao seco diferenciados por variedad (CCN-51 y Nacional Arriba). & Administrador / Tarifario\\
+\hline
+\textbf{RF-07} & Cuando el tesorero seleccione uno o varios comprobantes de acopio pendientes de un socio, el sistema deber\'a generar la liquidaci\'on de pago calculando el monto bruto, deduciendo cuotas asociativas y saldos de anticipos vigentes, y obteniendo el valor neto a pagar. & Tesorero / Liquidaciones\\
+\hline
+\rowcolor{rowgray} \textbf{RF-08} & Al efectuarse el desembolso de una liquidaci\'on, el sistema deber\'a registrar el medio de pago (efectivo o transferencia bancaria), la referencia de transacci\'on, la fecha de pago y emitir el recibo firmado de cancelaci\'on total o parcial. & Tesorero / Pagos\\
+\hline
+\textbf{RF-09} & Cuando un socio solicite un adelanto econ\'omico o retiro de insumos agr\'icolas a cr\'edito, el sistema deber\'a registrar el anticipo vinculado a su cuenta y reflejar el saldo pendiente para su descuento autom\'atico en liquidaciones futuras. & Tesorero / Anticipos\\
+\hline
+\rowcolor{rowgray} \textbf{RF-10} & Cuando el cacao recibido pase a proceso de fermentaci\'on, secado o almacenamiento, el sistema deber\'a agrupar los comprobantes en lotes de bodega identificados por c\'odigo, variedad, peso acumulado y estado actual del lote. & Bodeguero / Inventario de Lotes\\
+\hline
+\textbf{RF-11} & Al aprobarse una liquidaci\'on de pago, el sistema deber\'a enviar una notificaci\'on autom\'atica por mensaje de texto (SMS) o mensajer\'ia instant\'anea al socio indicando el n\'umero de comprobante, quintales liquidados y monto neto disponible. & Sistema / Notificaciones\\
+\hline
+\rowcolor{rowgray} \textbf{RF-12} & Cuando un comprador exportador requiera trazabilidad de origen, el sistema deber\'a asociar cada lote acopiado con las coordenadas georreferenciadas de las parcelas de los socios contribuyentes y mostrarlas en un mapa interactivo. & Administrador / Trazabilidad\\
+\hline
+\end{tabularx}
+\end{table}

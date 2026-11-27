@@ -1,0 +1,79 @@
+\section{Priorizaci\'on mediante MoSCoW}
+\label{sec:moscow}
+
+Para comprobar la regla metodol\'ogica de que el grupo \textit{Must} no supere el 60\,\% del esfuerzo estimado \cite{wiegers2013,ireb2026}, se estim\'o el esfuerzo de desarrollo de los 20 requisitos en horas-persona (total: 200 horas). La Tabla~\ref{tab:moscow} asigna cada categor\'ia con su justificaci\'on de una l\'inea y la Tabla~\ref{tab:moscow-resumen} verifica la distribuci\'on resultante (\textit{Must} = 112 horas, equivalente al 56,0\,\%).
+
+\begin{table}[htbp]
+\centering
+\scriptsize
+\renewcommand{\arraystretch}{1.12}
+\caption{Clasificaci\'on MoSCoW de los 20 requisitos y esfuerzo estimado.}
+\label{tab:moscow}
+\begin{tabularx}{\linewidth}{|p{0.08\linewidth}|p{0.10\linewidth}|p{0.09\linewidth}|Y|}
+\hline
+\thdr{ID} & \thdr{Categor\'ia} & \thdr{Esf. (h)} & \thdr{Justificaci\'on de una l\'inea}\\
+\hline
+\textbf{RF-01} & Must & 10 & Sin el padr\'on \'unico de socios no es posible atribuir entregas ni emitir liquidaciones nominales.\\
+\hline
+\rowcolor{rowgray} \textbf{RF-02} & Must & 14 & El registro del pesaje y destare constituye el hecho econ\'omico primario del centro de acopio.\\
+\hline
+\textbf{RF-03} & Must & 10 & La humedad y las impurezas determinan obligatoriamente el rendimiento real del cacao recibido.\\
+\hline
+\rowcolor{rowgray} \textbf{RF-04} & Must & 8 & El socio exige un comprobante f\'isico o digital inmediato como respaldo legal de su entrega.\\
+\hline
+\textbf{RF-05} & Must & 12 & Automatizar la conversi\'on a quintales secos elimina los errores manuales m\'as conflictivos.\\
+\hline
+\rowcolor{rowgray} \textbf{RF-06} & Must & 8 & El precio del cacao var\'ia diariamente y es indispensable para valorar cada acopio.\\
+\hline
+\textbf{RF-07} & Must & 14 & Generar la liquidaci\'on neta cierra el ciclo principal de acopio y pagos de la asociaci\'on.\\
+\hline
+\rowcolor{rowgray} \textbf{RF-08} & Must & 10 & Registrar el desembolso y emitir el recibo evita pagos duplicados y respalda la caja chica.\\
+\hline
+\textbf{RNF-01} & Must & 12 & Cualquier error de redondeo o c\'alculo monetario destruye la confianza de los productores.\\
+\hline
+\rowcolor{rowgray} \textbf{RNF-02} & Must & 14 & Proteger tarifas, pagos y datos personales es obligatorio por control interno y LOPDP.\\
+\hline
+\textbf{RF-09} & Should & 12 & Gestionar anticipos agiliza los descuentos, aunque inicialmente puede conciliarse al liquidar.\\
+\hline
+\rowcolor{rowgray} \textbf{RF-10} & Should & 10 & El control de lotes en bodega mejora la venta mayorista, pero no impide recibir ni pagar.\\
+\hline
+\textbf{RNF-03} & Should & 8 & Un tiempo de respuesta bajo mejora la fluidez en cosecha pico sin bloquear la operaci\'on b\'asica.\\
+\hline
+\rowcolor{rowgray} \textbf{RNF-04} & Should & 12 & La operaci\'on sin internet es valiosa en zonas rurales, aunque puede mitigarse con respaldo m\'ovil.\\
+\hline
+\textbf{RNF-05} & Should & 8 & Reducir el registro a 90 segundos facilita el aprendizaje, pero admite capacitaci\'on inicial.\\
+\hline
+\rowcolor{rowgray} \textbf{RF-11} & Could & 8 & Notificar por SMS o mensajer\'ia aporta comodidad, pero el pago se gestiona en ventanilla.\\
+\hline
+\textbf{RNF-06} & Could & 8 & Una disponibilidad del 99,0\,\% es deseable, aunque mantenimientos breves son tolerables.\\
+\hline
+\rowcolor{rowgray} \textbf{RNF-07} & Could & 8 & Exportar formatos tributarios ahorra trabajo contable, pero admite consolidaci\'on manual en v1.\\
+\hline
+\textbf{RF-12} & Won't & 8 & La georreferenciaci\'on requiere levantamiento GPS previo de fincas y queda fuera de la v1.\\
+\hline
+\rowcolor{rowgray} \textbf{RNF-08} & Won't & 6 & Una aplicaci\'on m\'ovil nativa para socios no es prioritaria mientras el recibo cubra la v1.\\
+\hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Resumen de distribuci\'on de esfuerzo por categor\'ia MoSCoW.}
+\label{tab:moscow-resumen}
+\begin{tabularx}{\linewidth}{|p{0.20\linewidth}|p{0.16\linewidth}|p{0.18\linewidth}|p{0.16\linewidth}|Y|}
+\hline
+\thdr{Categor\'ia} & \thdr{Requisitos} & \thdr{Esfuerzo (h)} & \thdr{Porcentaje} & \thdr{Verificaci\'on de regla}\\
+\hline
+\textbf{Must (M)} & 10 & 112 & 56,0\,\% & Cumple ($\le$ 60,0\,\%)\\
+\hline
+\rowcolor{rowgray} \textbf{Should (S)} & 5 & 50 & 25,0\,\% & Dentro del rango recomendado\\
+\hline
+\textbf{Could (C)} & 3 & 24 & 12,0\,\% & Dentro del rango recomendado\\
+\hline
+\rowcolor{rowgray} \textbf{Won't (W)} & 2 & 14 & 7,0\,\% & Excluido de la versi\'on 1.0\\
+\hline
+\textbf{Total} & \textbf{20} & \textbf{200} & \textbf{100,0\,\%} & \textbf{100,0\,\% verificado}\\
+\hline
+\end{tabularx}
+\end{table}
