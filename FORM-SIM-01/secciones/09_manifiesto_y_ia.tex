@@ -1,0 +1,47 @@
+\section{Registro de evidencias y declaraci\'on de uso de IA}
+\label{sec:manifiesto-ia}
+
+\subsection{Resumen del manifiesto de participantes (custodia LOPDP)}
+
+En cumplimiento de la LOPDP \cite{lopdp2021} y las normas de entrega de la asignatura, ning\'un dato personal ni formulario firmado se publica en GitHub. Los respaldos en formato PDF se custodian en una carpeta institucional privada (\texttt{@uteq.edu.ec}) compartida con el docente y se referencian mediante el archivo \texttt{FORM-SIM-01/evidencias/MANIFIESTO.md} (Tabla~\ref{tab:manifiesto}).
+
+\begin{table}[htbp]
+\centering
+\scriptsize
+\renewcommand{\arraystretch}{1.15}
+\caption{Registro anonimizado de participantes y custodia de consentimientos (\texttt{MANIFIESTO.md}).}
+\label{tab:manifiesto}
+\begin{tabularx}{\linewidth}{|p{0.08\linewidth}|p{0.15\linewidth}|p{0.25\linewidth}|p{0.13\linewidth}|Y|}
+\hline
+\thdr{C\'od.} & \thdr{T\'ecnica} & \thdr{Rol anonimizado} & \thdr{Fecha} & \thdr{Archivo en custodia privada (@uteq.edu.ec)}\\
+\hline
+\textbf{P1} & Kano & Productor socio cacaotero 1 & 27/11/2026 & \texttt{kano\_P1\_consentimiento.pdf}\\
+\hline
+\rowcolor{rowgray} \textbf{P2} & Kano & Productor socio cacaotero 2 & 27/11/2026 & \texttt{kano\_P2\_consentimiento.pdf}\\
+\hline
+\textbf{P3} & Kano & Encargado de acopio / pesaje & 27/11/2026 & \texttt{kano\_P3\_consentimiento.pdf}\\
+\hline
+\rowcolor{rowgray} \textbf{P4} & Kano & Tesorero / liquidador & 27/11/2026 & \texttt{kano\_P4\_consentimiento.pdf}\\
+\hline
+\textbf{P5} & Kano & Administrador de acopio & 27/11/2026 & \texttt{kano\_P5\_consentimiento.pdf}\\
+\hline
+\rowcolor{rowgray} \textbf{V1} & Votaci\'on 100 pts & Productor socio cacaotero & 27/11/2026 & \texttt{votacion\_V1\_consentimiento.pdf}\\
+\hline
+\textbf{V2} & Votaci\'on 100 pts & Encargado de acopio & 27/11/2026 & \texttt{votacion\_V2\_consentimiento.pdf}\\
+\hline
+\rowcolor{rowgray} \textbf{V3} & Votaci\'on 100 pts & Tesorero / administrador & 27/11/2026 & \texttt{votacion\_V3\_consentimiento.pdf}\\
+\hline
+\end{tabularx}
+\end{table}
+
+\textit{Nota metodol\'ogica:} Las huellas criptogr\'aficas SHA-256 de cada archivo custodiado se consignan de forma completa en \texttt{FORM-SIM-01/evidencias/MANIFIESTO.md}. Para esta actividad formativa (\texttt{FORM-SIM-01}), el docente autoriz\'o emplear un conjunto de respuestas simuladas por roles antes de ejecutar el levantamiento definitivo con personas reales en \texttt{TA-IND-02}.
+
+\subsection{Declaraci\'on de uso de inteligencia artificial}
+
+Conforme a la pol\'itica de integridad acad\'emica de la asignatura y al C\'odigo de \'Etica de la ACM \cite{acm2018}, el equipo declara el uso de herramientas de apoyo de inteligencia artificial en los siguientes t\'erminos:
+
+\begin{itemize}[leftmargin=16pt,itemsep=2pt]
+    \item \textbf{Herramienta y versi\'on:} Gemini (Google), versi\'on web utilizada en noviembre de 2026.
+    \item \textbf{Prop\'osito del uso:} Apoyo en la estructuraci\'on modular de archivos \LaTeX{}, correcci\'on de errores de compilaci\'on (\texttt{lmodern}/\texttt{microtype}), revisi\'on ortogr\'afica y generaci\'on del script reproducible en Python para verificar la correlaci\'on de rangos de Spearman.
+    \item \textbf{Verificaci\'on realizada por el equipo:} Los tres integrantes revisaron y adaptaron los 20 requisitos al dominio N.\textsuperscript{o} 6, comprobaron el cumplimiento del l\'imite del 60\,\% de esfuerzo en MoSCoW, ejecutaron localmente \texttt{calculos\_priorizacion.py} para validar los resultados de Kano y Spearman, verificaron la compilaci\'on limpia de \texttt{main.pdf} con \texttt{pdflatex} y \texttt{biber}, y contrastaron cada referencia bibliogr\'afica con su obra original.
+\end{itemize}
