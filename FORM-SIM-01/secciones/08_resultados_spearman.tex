@@ -1,0 +1,130 @@
+\section{Resultados, comparaci\'on estad\'istica y decisi\'on final}
+\label{sec:resultados}
+
+Los datos crudos y el script reproducible de tabulaci\'on se encuentran en la carpeta \texttt{FORM-SIM-01/datos/} (\texttt{kano\_respuestas.csv}, \texttt{votacion\_ponderada.csv} y \texttt{calculos\_priorizacion.py}). Conforme a las indicaciones del docente para la actividad formativa \texttt{FORM-SIM-01}, el conjunto de respuestas representa un ejercicio de simulaci\'on de roles previo al levantamiento definitivo de campo de \texttt{TA-IND-02}.
+
+\subsection{Resultados del Modelo de Kano}
+
+La Tabla~\ref{tab:kano-resultados} consolida las clasificaciones obtenidas al cruzar las respuestas funcionales y disfuncionales de los cinco participantes (\texttt{P1} a \texttt{P5}) mediante la matriz de la Tabla~\ref{tab:kano-eval}. Los coeficientes de satisfacci\'on se calculan como:
+
+\begin{equation}
+\text{Better} = \frac{A + O}{A + O + M + I}, \qquad \text{Worse} = -\,\frac{O + M}{A + O + M + I}
+\end{equation}
+
+\begin{table}[htbp]
+\centering
+\scriptsize
+\renewcommand{\arraystretch}{1.15}
+\caption{Tabulaci\'on de resultados del Modelo de Kano y coeficientes Better/Worse ($n = 5$).}
+\label{tab:kano-resultados}
+\begin{tabularx}{\linewidth}{|p{0.07\linewidth}|p{0.09\linewidth}|Y|c|c|c|c|c|c|p{0.13\linewidth}|c|c|}
+\hline
+\thdr{C\'od.} & \thdr{Req.} & \thdr{Caracter\'istica} & \thdr{M} & \thdr{O} & \thdr{A} & \thdr{I} & \thdr{R} & \thdr{Q} & \thdr{Categor\'ia} & \thdr{Better} & \thdr{Worse}\\
+\hline
+\textbf{K1} & RF-04 & Comprobante inmediato & 4 & 1 & 0 & 0 & 0 & 0 & \textbf{M} (Oblig.) & 0,20 & -1,00\\
+\hline
+\rowcolor{rowgray} \textbf{K2} & RF-05 & C\'alculo peso neto seco & 1 & 4 & 0 & 0 & 0 & 0 & \textbf{O} (Desemp.) & 0,80 & -1,00\\
+\hline
+\textbf{K3} & RF-07 & Liquidaci\'on con descuentos & 2 & 3 & 0 & 0 & 0 & 0 & \textbf{O} (Desemp.) & 0,60 & -1,00\\
+\hline
+\rowcolor{rowgray} \textbf{K4} & RF-09 & Anticipos e insumos & 1 & 3 & 1 & 0 & 0 & 0 & \textbf{O} (Desemp.) & 0,80 & -0,80\\
+\hline
+\textbf{K5} & RF-11 & Notificaci\'on SMS/WhatsApp & 0 & 0 & 4 & 1 & 0 & 0 & \textbf{A} (Atract.) & 0,80 & 0,00\\
+\hline
+\rowcolor{rowgray} \textbf{K6} & RF-12 & Mapa georreferenciado & 0 & 0 & 1 & 4 & 0 & 0 & \textbf{I} (Indif.) & 0,20 & 0,00\\
+\hline
+\textbf{K7} & RNF-04 & Operaci\'on offline $\ge$ 8 h & 3 & 2 & 0 & 0 & 0 & 0 & \textbf{M} (Oblig.) & 0,40 & -1,00\\
+\hline
+\rowcolor{rowgray} \textbf{K8} & RNF-07 & Exportaci\'on contable SRI & 0 & 0 & 2 & 3 & 0 & 0 & \textbf{I} (Indif.) & 0,40 & 0,00\\
+\hline
+\end{tabularx}
+\end{table}
+
+Cuatro caracter\'isticas alcanzan un coeficiente $\text{Worse} = -1,00$ (\texttt{RF-04}, \texttt{RF-05}, \texttt{RF-07} y \texttt{RNF-04}), lo que indica que su ausencia provoca insatisfacci\'on total en el centro de acopio. Por el contrario, \texttt{RF-11} se comporta como atributo atractivo ($\text{Better} = 0,80$; $\text{Worse} = 0,00$), mientras que \texttt{RF-12} y \texttt{RNF-07} resultan indiferentes para la operaci\'on inicial.
+
+\subsection{Resultados de votaci\'on ponderada y correlaci\'on de Spearman}
+
+La Tabla~\ref{tab:comparacion-spearman} integra la clasificaci\'on MoSCoW, los puntajes asignados por \texttt{V1} (productor), \texttt{V2} (acopiador) y \texttt{V3} (tesorero), los rangos medios asignados a cada t\'ecnica ($R_x$ y $R_y$), las diferencias cuadr\'aticas $d_i^2$ y la categor\'ia Kano cuando aplica. Para MoSCoW ($n = 20$), los 10 requisitos \textit{Must} reciben rango medio $5,5$; los 5 \textit{Should}, $13,0$; los 3 \textit{Could}, $17,0$; y los 2 \textit{Won't}, $19,5$.
+
+\begin{table}[htbp]
+\centering
+\scriptsize
+\renewcommand{\arraystretch}{1.1}
+\caption{Comparaci\'on integral de MoSCoW, votaci\'on ponderada (300 pts) y Kano, con c\'alculo de Spearman.}
+\label{tab:comparacion-spearman}
+\begin{tabularx}{\linewidth}{|p{0.08\linewidth}|p{0.09\linewidth}|c|c|c|c|c|c|c|c|c|}
+\hline
+\thdr{ID} & \thdr{MoSCoW} & \thdr{$R_x$} & \thdr{V1} & \thdr{V2} & \thdr{V3} & \thdr{Total} & \thdr{$R_y$} & \thdr{$d = R_x - R_y$} & \thdr{$d^2$} & \thdr{Kano}\\
+\hline
+\textbf{RF-01} & Must & 5,5 & 3 & 4 & 5 & 12 & 11,0 & -5,5 & 30,25 & ---\\
+\hline
+\rowcolor{rowgray} \textbf{RF-02} & Must & 5,5 & 12 & 16 & 10 & \textbf{38} & 1,5 & 4,0 & 16,00 & ---\\
+\hline
+\textbf{RF-03} & Must & 5,5 & 8 & 12 & 7 & 27 & 4,0 & 1,5 & 2,25 & ---\\
+\hline
+\rowcolor{rowgray} \textbf{RF-04} & Must & 5,5 & 10 & 9 & 6 & 25 & 5,0 & 0,5 & 0,25 & \textbf{M}\\
+\hline
+\textbf{RF-05} & Must & 5,5 & 14 & 12 & 12 & \textbf{38} & 1,5 & 4,0 & 16,00 & \textbf{O}\\
+\hline
+\rowcolor{rowgray} \textbf{RF-06} & Must & 5,5 & 5 & 4 & 7 & 16 & 8,5 & -3,0 & 9,00 & ---\\
+\hline
+\textbf{RF-07} & Must & 5,5 & 12 & 8 & 14 & \textbf{34} & 3,0 & 2,5 & 6,25 & \textbf{O}\\
+\hline
+\rowcolor{rowgray} \textbf{RF-08} & Must & 5,5 & 8 & 4 & 9 & 21 & 6,0 & -0,5 & 0,25 & ---\\
+\hline
+\textbf{RF-09} & Should & 13,0 & 6 & 4 & 9 & 19 & 7,0 & 6,0 & 36,00 & \textbf{O}\\
+\hline
+\rowcolor{rowgray} \textbf{RF-10} & Should & 13,0 & 1 & 6 & 4 & 11 & 12,5 & 0,5 & 0,25 & ---\\
+\hline
+\textbf{RF-11} & Could & 17,0 & 7 & 2 & 2 & 11 & 12,5 & 4,5 & 20,25 & \textbf{A}\\
+\hline
+\rowcolor{rowgray} \textbf{RF-12} & Won't & 19,5 & 0 & 0 & 1 & 1 & 18,5 & 1,0 & 1,00 & \textbf{I}\\
+\hline
+\textbf{RNF-01} & Must & 5,5 & 5 & 3 & 6 & 14 & 10,0 & -4,5 & 20,25 & ---\\
+\hline
+\rowcolor{rowgray} \textbf{RNF-02} & Must & 5,5 & 1 & 1 & 3 & 5 & 14,5 & -9,0 & 81,00 & ---\\
+\hline
+\textbf{RNF-03} & Should & 13,0 & 1 & 3 & 1 & 5 & 14,5 & -1,5 & 2,25 & ---\\
+\hline
+\rowcolor{rowgray} \textbf{RNF-04} & Should & 13,0 & 5 & 8 & 3 & 16 & 8,5 & 4,5 & 20,25 & \textbf{M}\\
+\hline
+\textbf{RNF-05} & Should & 13,0 & 1 & 3 & 0 & 4 & 16,0 & -3,0 & 9,00 & ---\\
+\hline
+\rowcolor{rowgray} \textbf{RNF-06} & Could & 17,0 & 0 & 1 & 0 & 1 & 18,5 & -1,5 & 2,25 & ---\\
+\hline
+\textbf{RNF-07} & Could & 17,0 & 0 & 0 & 1 & 1 & 18,5 & -1,5 & 2,25 & \textbf{I}\\
+\hline
+\rowcolor{rowgray} \textbf{RNF-08} & Won't & 19,5 & 1 & 0 & 0 & 1 & 18,5 & 1,0 & 1,00 & ---\\
+\hline
+\textbf{Total} & \textbf{---} & \textbf{---} & \textbf{100} & \textbf{100} & \textbf{100} & \textbf{300} & \textbf{---} & \textbf{---} & \textbf{276,00} & \textbf{---}\\
+\hline
+\end{tabularx}
+\end{table}
+
+Al aplicar el coeficiente de correlaci\'on de rangos de Spearman con correcci\'on por empates (correlaci\'on de Pearson sobre los rangos medios, ejecutada en \texttt{calculos\_priorizacion.py}), se obtiene:
+
+\begin{equation}
+\rho_{\text{exacto}} = 0,7772 \quad (p = 0,000055 < 0,001)
+\end{equation}
+
+Como referencia sin ajuste por rangos empatados, la f\'ormula cl\'asica arroja $\rho_{\text{simple}} = 1 - \frac{6 \sum d_i^2}{n(n^2 - 1)} = 1 - \frac{6(276)}{20(399)} = 0,7925$. Ambos valores confirman una \textbf{correlaci\'on positiva fuerte y estad\'isticamente significativa} entre la priorizaci\'on t\'ecnica MoSCoW y las preferencias ponderadas de los actores del dominio.
+
+\subsection{An\'alisis cr\'itico: coincidencias y discrepancias}
+
+\begin{itemize}[leftmargin=16pt,itemsep=3pt]
+    \item \textbf{Coincidencias s\'olidas:} Los seis requisitos mejor evaluados en la votaci\'on ponderada (\texttt{RF-02} con 38 pts, \texttt{RF-05} con 38 pts, \texttt{RF-07} con 34 pts, \texttt{RF-03} con 27 pts, \texttt{RF-04} con 25 pts y \texttt{RF-08} con 21 pts) pertenecen \'integramente al grupo \textit{Must} de MoSCoW y obtuvieron categor\'ias \textbf{M} u \textbf{O} con $\text{Worse} = -1,00$ en Kano. Existe consenso total en que el n\'ucleo del sistema debe resolver el pesaje, el control de calidad, el c\'alculo de peso neto seco, el comprobante y la liquidaci\'on.
+    \item \textbf{Discrepancia por expectativa impl\'icita (\texttt{RNF-02}):} La seguridad y protecci\'on de datos bajo la LOPDP presenta la mayor brecha ($d = -9,0$; \textit{Must} en MoSCoW frente al puesto 14,5 con apenas 5 puntos en la votaci\'on). Los actores operativos asumen que el sistema ser\'a seguro sin dedicarle presupuesto expl\'icito; excluirlo por baja votaci\'on vulnerar\'ia el marco legal ecuatoriano \cite{lopdp2021}.
+    \item \textbf{Discrepancia operativa de campo (\texttt{RNF-04} y \texttt{RF-09}):} Ambos fueron clasificados inicialmente como \textit{Should} por el analista, pero ascendieron en las t\'ecnicas con usuarios: \texttt{RNF-04} (operaci\'on offline) result\'o Obligatoria (\textbf{M}, $\text{Worse} = -1,00$) y obtuvo 16 puntos, mientras que \texttt{RF-09} (anticipos e insumos) fue clasificada como Desempe\~no (\textbf{O}, $\text{Better} = 0,80$) y alcanz\'o el puesto 7 con 19 puntos. En zonas rurales de Los R\'ios, los cortes de conectividad y los adelantos de insumos son parte diaria del negocio.
+    \item \textbf{Efecto diferenciador no bloqueante (\texttt{RF-11}):} Las notificaciones por SMS/WhatsApp subieron 4,5 posiciones en la votaci\'on (11 pts, impulsadas por el productor \texttt{V1}), pero Kano confirm\'o que se trata de una caracter\'istica Atractiva (\textbf{A}) con $\text{Worse} = 0,00$, por lo que diferirla a la versi\'on 1.1 no perjudica el lanzamiento inicial.
+\end{itemize}
+
+\subsection{Propuesta de decisi\'on final para la versi\'on 1.0}
+
+Con base en la triangulaci\'on de las tres t\'ecnicas, el alcance aprobado para la \textbf{versi\'on 1.0 (MVP operativo)} integra \textbf{12 requisitos} (136 horas estimadas, 68,0\,\% del esfuerzo total):
+
+\begin{enumerate}[leftmargin=18pt,itemsep=2pt]
+    \item \textbf{N\'ucleo obligatorio mantenido (10 requisitos \textit{Must}, 112 h):} \texttt{RF-01} a \texttt{RF-08}, \texttt{RNF-01} y \texttt{RNF-02}. Garantizan el flujo completo de acopio, exactitud contable y cumplimiento de la LOPDP.
+    \item \textbf{Promociones justificadas desde \textit{Should} (2 requisitos, 24 h):} Se incorporan \texttt{RNF-04} (operaci\'on offline $\ge 8$ h, por ser categor\'ia \textbf{M} en Kano) y \texttt{RF-09} (gesti\'on de anticipos, por su 7.\textsuperscript{o} lugar en votaci\'on y categor\'ia \textbf{O} en Kano).
+    \item \textbf{Requisitos diferidos para versi\'on 1.1 (6 requisitos, 50 h):} \texttt{RF-10}, \texttt{RNF-03}, \texttt{RNF-05}, \texttt{RF-11}, \texttt{RNF-06} y \texttt{RNF-07} se planifican para la segunda iteraci\'on al no bloquear la operaci\'on diaria ni generar insatisfacci\'on inmediata.
+    \item \textbf{Requisitos excluidos del alcance actual (2 requisitos \textit{Won't}, 14 h):} \texttt{RF-12} (mapa georreferenciado) y \texttt{RNF-08} (aplicaci\'on m\'ovil nativa) quedan fuera por requerir infraestructura adicional, resultar indiferentes en Kano (\textbf{I}) y obtener apenas 1 punto cada uno en la votaci\'on.
+\end{enumerate}
